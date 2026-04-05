@@ -1,21 +1,161 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Contact</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #1f1c2c, #928dab);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            width: 900px;
+            max-width: 95%;
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            animation: fadeIn 1.2s ease;
+        }
+
+        .left {
+            flex: 1;
+            padding: 40px;
+        }
+
+            .left h2 {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+
+            .left p {
+                opacity: 0.8;
+                margin-bottom: 30px;
+            }
+
+        .contact-info {
+            line-height: 2;
+            font-size: 14px;
+        }
+
+        .right {
+            flex: 1;
+            background: rgba(0,0,0,0.2);
+            padding: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+            input::placeholder, textarea::placeholder {
+                color: #ddd;
+            }
+
+        textarea {
+            resize: none;
+            height: 120px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: #6c63ff;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            button:hover {
+                background: #5a54d1;
+                transform: scale(1.05);
+            }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media(max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Contact</h1>
-  <a href="index.html">Home</a>
-</header>
+    <div class="container">
 
-<section class="container">
-  <p>Email: ashalakshmi.anirudhan@gmail.com</p>
-  <p>LinkedIn: https://www.linkedin.com/in/ashalakshmi-va/</p>
-</section>
+        <!-- Left Section -->
+        <div class="left">
+            <h2>Let's Connect 👋</h2>
+            <p>Feel free to reach out for opportunities, collaborations, or just a friendly chat.</p>
+
+            <div class="contact-info">
+                📧 Email: ashalakshmi.anirudhan@gmail.com <br>
+                💼 LinkedIn: https://www.linkedin.com/in/ashalakshmi-va/ <br>
+                📍 Location: Canada
+            </div>
+        </div>
+
+        <!-- Right Section -->
+        <div class="right">
+            <form>
+                <div class="form-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit">Send Message 🚀</button>
+            </form>
+        </div>
+
+    </div>
 
 </body>
 </html>
